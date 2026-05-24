@@ -12,6 +12,7 @@ body {
   background-color: rgba(34, 42, 56);
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -28,11 +29,38 @@ h1 {
 }
 
 .title-sec > h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: "New Rocker", system-ui;
 }
 
 .course-select {
-  background-color: gray;
-  height: 5rem;
+  background-color: rgba(34, 42, 56);
+  color: rgb(215, 222, 230);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  background-color: rgb(9, 26, 50);
+  padding: 15px;
+  border-radius: 5px;
+  max-width: fit-content;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+}
+
+.course-card > span {
+  margin-top: 10px;
+  font-size: 1rem;
 }
