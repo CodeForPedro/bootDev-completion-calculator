@@ -1,0 +1,20 @@
+{
+  "name": "bootdevprogresstracker",
+  "version": "1.0.0",
+  "description": "Progress tracker for Boot.dev",
+  "homepage": "https://github.com/CodeForPedro/bootDev-progress-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/CodeForPedro/bootDev-progress-tracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeForPedro/bootDev-progress-tracker.git"
+  },
+  "license": "ISC",
+  "author": "CodeForPedro",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  }
+}
