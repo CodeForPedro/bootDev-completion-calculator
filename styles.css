@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(34, 42, 56);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+}
+
+.title-sec {
+  color: rgba(255, 234, 0, 0.766);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 50px;
+  align-items: center;
+}
+
+.title-sec > h1 {
+  font-size: 4rem;
+  font-family: "New Rocker", system-ui;
+}
+
+.course-select {
+  background-color: gray;
+  height: 5rem;
+}
