@@ -46,10 +46,11 @@ h1 {
 .course-select {
   background-color: rgba(34, 42, 56);
   color: rgb(215, 222, 230);
-  height: 15rem;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .card-space {
@@ -81,4 +82,21 @@ h1 {
 .course-card > span {
   margin-top: 10px;
   font-size: 1rem;
+}
+
+.calculator {
+  color: rgb(215, 222, 230);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator > .title {
+  color: rgba(255, 234, 0, 0.766);
+  font-family: "Germania One", system-ui;
+  font-size: 3rem;
+}
+
+section {
+  margin-bottom: 50px;
 }
