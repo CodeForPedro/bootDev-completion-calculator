@@ -33,6 +33,14 @@ h1 {
   font-family: "New Rocker", system-ui;
 }
 
+.title-sec > p {
+  font-family: "Germania One", system-ui;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
 .course-select {
   background-color: rgba(34, 42, 56);
   color: rgb(215, 222, 230);
