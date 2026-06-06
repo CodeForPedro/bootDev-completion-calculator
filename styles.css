@@ -3,6 +3,7 @@
   --white-text-color: rgb(215, 222, 230);
   --title-text-color: rgba(255, 234, 0, 0.766);
   --card-background-color: rgb(9, 26, 50);
+  --shadown: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -39,6 +40,7 @@ h1 {
   width: 100vw;
   margin-bottom: 100px;
   align-items: center;
+  text-shadow: 5px 5px 5px var(--shadown);
 }
 
 .title-sec > h1 {
