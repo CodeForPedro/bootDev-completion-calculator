@@ -1,3 +1,9 @@
+:root {
+  --back-ground-color: rgba(30, 37, 49);
+  --white-text-color: rgb(215, 222, 230);
+  --title-text-color: rgba(255, 234, 0, 0.766);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +15,7 @@ body {
 }
 
 body {
-  background-color: rgba(34, 42, 56);
+  background-color: var(--back-ground-color);
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -21,7 +27,7 @@ h1 {
 
 .title-sec {
   margin-top: 40px;
-  color: rgba(255, 234, 0, 0.766);
+  color: var(--title-text-color);
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -44,8 +50,8 @@ h1 {
 }
 
 .course-select {
-  background-color: rgba(34, 42, 56);
-  color: rgb(215, 222, 230);
+  background-color: var(--back-ground-color);
+  color: var(--white-text-color);
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -92,7 +98,7 @@ h1 {
 }
 
 .calculator > .title {
-  color: rgba(255, 234, 0, 0.766);
+  color: var(--title-text-color);
   font-family: "Germania One", system-ui;
   font-size: 3rem;
 }
