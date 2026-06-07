@@ -17,37 +17,29 @@
       href="https://fonts.googleapis.com/css2?family=Germania+One&family=New+Rocker&display=swap"
       rel="stylesheet"
     />
-    <script src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
   </head>
   <body>
-    <div class="title-sec">
+    <div class="title-sec gold-text">
       <h1>Boot.Dev Progress Calculator</h1>
       <p>Calculate your estimated time to finish!</p>
     </div>
-    <div class="course-select">
-      <div class="sec-title">Select curriculum</div>
-      <div class="card-space">
-        <div class="course-card">
-          Back-end Developer Path<br />
-          (Python & Go)<br />
-          <span>Last updated: 05/23/26</span>
-        </div>
-        <div class="course-card">
-          Back-end Developer Path<br />
-          (Python & TypeScript)<br />
-          <span>Last updated: 05/23/26</span>
-        </div>
-        <div class="course-card">
-          DevOps Engineer Path<br />
-          (Python & Go)<br />
-          <span>Last updated: 05/23/26</span>
-        </div>
-      </div>
-    </div>
     <section>
       <div class="calculator">
-        <div class="title">Calculate</div>
-        <div class="body"></div>
+        <div class="body metallic-border">
+          <label for="paths">Select Path</label>
+          <select class="path-options" name="paths" id="paths">
+            <option value="Back-end (Python & Go)">
+              Back-end (Python & Go)
+            </option>
+            <option value="Back-end (Python & TypeScript)">
+              Back-end (Python & TypeScript)
+            </option>
+            <option value="DevOps (Python & Go)">DevOps (Python & Go)</option>
+          </select>
+          <label for="courses">Select Completed Courses</label>
+          <div class="courses"></div>
+        </div>
       </div>
     </section>
   </body>

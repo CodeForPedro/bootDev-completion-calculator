@@ -1,5 +1,4 @@
 // Courses
-
 const learnToCodeInPython = {
   name: "Learn to Code in Python",
   length: 191,
@@ -137,3 +136,32 @@ const learnHowToFindAProgrammingJob = {
   length: 52,
   difficulty: 1,
 };
+
+// Course array
+const courseArrayGo = [
+  learnToCodeInPython,
+  learnLinux,
+  buildABookbot,
+  learnGit,
+  learnObjectOrientedProgramming,
+  buildAsteroids,
+  learnFunctionalProgramming,
+  buildAnAIAgent,
+  learnDataStructuresAndAlgorithms,
+  buildAStaticSiteGenerator,
+  learnMemoryManagement,
+  personalProject1,
+  learnGo,
+  learnHTTPClients,
+  buildAPokedex,
+  learnSQL,
+  buildABlogAggregator,
+  learnHTTPServers,
+  learnFileServersAndCDNs,
+  learnDocker,
+  learnPubSubArchitecture,
+  capstoneProject,
+  learnHowToFindAProgrammingJob,
+];
+
+export { courseArrayGo };

@@ -105,3 +105,26 @@ const learnHowToFindAProgrammingJob = {
   length: 52,
   difficulty: 1,
 };
+
+const courseArrayDevOps = [
+  learnToCodeInPython,
+  learnLinux,
+  buildABookbot,
+  learnGit,
+  learnObjectOrientedProgramming,
+  buildAsteroids,
+  personalProject1,
+  learnGo,
+  learnHTTPClients,
+  learnSQL,
+  learnHTTPServers,
+  learnDocker,
+  learnLoggingAndObservability,
+  learnAWS,
+  learnCICD,
+  learnKubernetes,
+  capstoneProject,
+  learnHowToFindAProgrammingJob,
+];
+
+export { courseArrayDevOps };
