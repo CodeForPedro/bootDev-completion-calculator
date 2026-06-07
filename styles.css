@@ -118,7 +118,7 @@ h1 {
 }
 
 .calculator .body {
-  padding: 20px;
+  padding: 17px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -151,6 +151,28 @@ section {
   margin-bottom: 50px;
 }
 
+.courses {
+  margin-bottom: 20px;
+}
+
 .courses > div > label {
   font-size: 1rem;
+}
+
+.remaining-courses {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.lessons .values {
+  display: flex;
+}
+
+.lessons .values div {
+  margin-right: 40px;
+}
+
+.lessons .values div span {
+  border: solid 1px grey;
+  padding: 0px 2px 0px 5px;
 }

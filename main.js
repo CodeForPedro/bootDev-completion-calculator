@@ -5,7 +5,19 @@ import { courseArrayDevOps } from "./devops-courses.js";
 const completedCoursesContainer = document.querySelector(".courses");
 
 function main() {
-  // Generate Calculator
+  const calculator = {
+    getPathLength: (path) => {
+      return path.reduce((acc, course) => acc + course.length, 0);
+    },
+    getCompletedLength: (path) => {
+      return path.reduce(
+        (acc, course) => acc + (course.checked ? course.length : 0),
+        0,
+      );
+    },
+    getRemainingLength: () => {},
+  };
+
   function generateCourses(path) {
     path.forEach((course) => {
       const wrapper = document.createElement("div");
@@ -13,6 +25,7 @@ function main() {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = course.name.toLowerCase().replaceAll(" ", "-");
+      checkbox.checked = course.checked ?? false;
 
       const label = document.createElement("label");
       label.htmlFor = checkbox.id;
@@ -22,26 +35,39 @@ function main() {
       completedCoursesContainer.append(wrapper);
     });
   }
-  // Generates default
-  generateCourses(courseArrayGo);
 
-  // Triggers when user changes path
+  // Map of path name -> array, makes the select handler much cleaner
+  const pathMap = {
+    "Back-end (Python & Go)": courseArrayGo,
+    "Back-end (Python & TypeScript)": courseArrayTs,
+    "DevOps (Python & Go)": courseArrayDevOps,
+  };
+
+  let currentPath = courseArrayGo;
+  let currentPathLength = calculator.getPathLength(currentPath);
+  generateCourses(currentPath);
+
   const select = document.querySelector(".path-options");
   select.addEventListener("change", (e) => {
-    const currentValue = e.target.value;
-    console.log(currentValue);
-    if (currentValue === "Back-end (Python & Go)") {
-      completedCoursesContainer.innerHTML = "";
-      generateCourses(courseArrayGo);
-    }
-    if (currentValue === "Back-end (Python & TypeScript)") {
-      completedCoursesContainer.innerHTML = "";
-      generateCourses(courseArrayTs);
-    }
-    if (currentValue === "DevOps (Python & Go)") {
-      completedCoursesContainer.innerHTML = "";
-      generateCourses(courseArrayDevOps);
-    }
+    currentPath = pathMap[e.target.value];
+    completedCoursesContainer.innerHTML = "";
+    currentPathLength = calculator.getPathLength(currentPath);
+    generateCourses(currentPath);
+  });
+
+  // Delegated listener - handles all checkboxes, survives regeneration
+  completedCoursesContainer.addEventListener("change", (e) => {
+    if (e.target.type !== "checkbox") return;
+
+    const course = currentPath.find(
+      (c) => c.name.toLowerCase().replaceAll(" ", "-") === e.target.id,
+    );
+    if (!course) return;
+
+    course.checked = e.target.checked;
+    let totalCompleted = calculator.getCompletedLength(currentPath);
+    let totalRemaining = currentPathLength - totalCompleted;
+    console.log("Remaining:", totalRemaining);
   });
 }
 
