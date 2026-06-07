@@ -3,6 +3,8 @@ import { courseArrayTs } from "./ts-courses.js";
 import { courseArrayDevOps } from "./devops-courses.js";
 
 const completedCoursesContainer = document.querySelector(".courses");
+const totalLessonsDom = document.querySelector(".total-lessons");
+const remainingLessonsDom = document.querySelector(".remaining-lessons");
 
 function main() {
   const calculator = {
@@ -36,7 +38,6 @@ function main() {
     });
   }
 
-  // Map of path name -> array, makes the select handler much cleaner
   const pathMap = {
     "Back-end (Python & Go)": courseArrayGo,
     "Back-end (Python & TypeScript)": courseArrayTs,
@@ -46,6 +47,8 @@ function main() {
   let currentPath = courseArrayGo;
   let currentPathLength = calculator.getPathLength(currentPath);
   generateCourses(currentPath);
+  remainingLessonsDom.value = currentPathLength;
+  totalLessonsDom.textContent = currentPathLength;
 
   const select = document.querySelector(".path-options");
   select.addEventListener("change", (e) => {
@@ -53,21 +56,24 @@ function main() {
     completedCoursesContainer.innerHTML = "";
     currentPathLength = calculator.getPathLength(currentPath);
     generateCourses(currentPath);
+    remainingLessonsDom.value = currentPathLength;
+    totalLessonsDom.textContent = currentPathLength;
   });
 
-  // Delegated listener - handles all checkboxes, survives regeneration
   completedCoursesContainer.addEventListener("change", (e) => {
     if (e.target.type !== "checkbox") return;
 
     const course = currentPath.find(
-      (c) => c.name.toLowerCase().replaceAll(" ", "-") === e.target.id,
+      (course) =>
+        course.name.toLowerCase().replaceAll(" ", "-") === e.target.id,
     );
     if (!course) return;
 
     course.checked = e.target.checked;
     let totalCompleted = calculator.getCompletedLength(currentPath);
     let totalRemaining = currentPathLength - totalCompleted;
-    console.log("Remaining:", totalRemaining);
+    remainingLessonsDom.value = totalRemaining;
+    totalLessonsDom.textContent = currentPathLength;
   });
 }
 

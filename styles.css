@@ -77,7 +77,7 @@ h1 {
 }
 
 .title-sec > h1 {
-  font-size: 5rem;
+  font-size: 4.7rem;
   font-family: "New Rocker", system-ui;
   margin: 0px 20px 0px 20px;
 }
@@ -169,10 +169,24 @@ section {
 }
 
 .lessons .values div {
-  margin-right: 40px;
+  align-self: center;
 }
 
 .lessons .values div span {
-  border: solid 1px grey;
-  padding: 0px 2px 0px 5px;
+  padding: 1px 12px 1px 2px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  text-align: start;
+}
+
+.remaining-lessons {
+  width: 50px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.total-lessons {
+  margin-right: 50px;
 }
