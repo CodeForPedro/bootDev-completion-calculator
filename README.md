@@ -2,6 +2,10 @@
 
 A tool for Boot.dev students to estimate how long it will take to complete a learning path based on their daily average lessons completed.
 
+## Live Demo
+
+[Boot.dev Completion Calculator](https://codeforpedro.github.io/bootDev-completion-calculator/)
+
 ## Features
 
 - Select from available Boot.dev learning paths
@@ -14,7 +18,3 @@ A tool for Boot.dev students to estimate how long it will take to complete a lea
 2. Check off any courses you've already completed
 3. Enter the average number of lessons you complete per day
 4. Click estimate button to see remaining days to completion
-
-## Live Demo
-
-[Boot.dev Completion Calculator](https://codeforpedro.github.io/bootDev-completion-calculator/)

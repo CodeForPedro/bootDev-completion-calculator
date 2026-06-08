@@ -105,6 +105,10 @@ function main() {
     daysToFinish = +totalRemaining / dailyAvg;
     completionEle.textContent = Math.ceil(daysToFinish);
     estimateEle.classList.remove("hidden");
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
   });
 }
 
