@@ -9,6 +9,7 @@ const courseArrayDevOps = Object.values(devOpsCurriculumCourses);
 const completedCoursesContainer = document.querySelector(".courses");
 const totalLessonsDom = document.querySelector(".total-lessons");
 const remainingLessonsDom = document.querySelector(".remaining-lessons");
+const estimateEle = document.querySelector(".estimate");
 
 function main() {
   const calculator = {
@@ -66,6 +67,9 @@ function main() {
     generateCourses(currentPath);
     remainingLessonsDom.value = currentPathLength;
     totalLessonsDom.textContent = currentPathLength;
+    if (!estimateEle.classList.contains("hidden")) {
+      estimateEle.classList.add("hidden");
+    }
   });
 
   completedCoursesContainer.addEventListener("change", (e) => {
@@ -94,11 +98,13 @@ function main() {
       dailyAverageField.value === null
     ) {
       alert("Enter the average number of lessons you complete a day.");
+      return;
     }
     const dailyAvg = +dailyAverageField.value;
     totalRemaining = remainingLessonsDom.value;
     daysToFinish = +totalRemaining / dailyAvg;
     completionEle.textContent = Math.ceil(daysToFinish);
+    estimateEle.classList.remove("hidden");
   });
 }
 
