@@ -165,4 +165,4 @@ const courseArrayGo = [
   goCourseObjects.learnHowToFindAProgrammingJob,
 ];
 
-export { courseArrayGo, goCourseObjects };
+export { goCourseObjects };

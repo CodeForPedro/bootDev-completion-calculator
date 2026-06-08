@@ -1,6 +1,10 @@
-import { courseArrayGo } from "./go-courses.js";
-import { courseArrayTs } from "./ts-courses.js";
-import { courseArrayDevOps } from "./devops-courses.js";
+import { goCourseObjects } from "./go-courses.js";
+import { tsCourseObjects } from "./ts-courses.js";
+import { devOpsCurriculumCourses } from "./devops-courses.js";
+
+const courseArrayGo = Object.values(goCourseObjects);
+const courseArrayTs = Object.values(tsCourseObjects);
+const courseArrayDevOps = Object.values(devOpsCurriculumCourses);
 
 const completedCoursesContainer = document.querySelector(".courses");
 const totalLessonsDom = document.querySelector(".total-lessons");

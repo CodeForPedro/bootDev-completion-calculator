@@ -1,4 +1,4 @@
-const jsCourseObjects = {
+const tsCourseObjects = {
   learnToCodeInPython: {
     name: "Learn to Code in Python",
     length: 191,
@@ -144,32 +144,4 @@ const jsCourseObjects = {
   },
 };
 
-// Course array
-const courseArrayTs = [
-  jsCourseObjects.learnToCodeInPython,
-  jsCourseObjects.learnLinux,
-  jsCourseObjects.buildABookbot,
-  jsCourseObjects.learnGit,
-  jsCourseObjects.learnObjectOrientedProgramming,
-  jsCourseObjects.buildAsteroids,
-  jsCourseObjects.learnFunctionalProgramming,
-  jsCourseObjects.buildAnAIAgent,
-  jsCourseObjects.learnDataStructuresAndAlgorithms,
-  jsCourseObjects.buildAStaticSiteGenerator,
-  jsCourseObjects.learnMemoryManagement,
-  jsCourseObjects.personalProject1,
-  jsCourseObjects.learnJavaScript,
-  jsCourseObjects.learnTypeScript,
-  jsCourseObjects.learnHTTPClients,
-  jsCourseObjects.buildAPokedex,
-  jsCourseObjects.learnSQL,
-  jsCourseObjects.buildABlogAggregator,
-  jsCourseObjects.learnHTTPServers,
-  jsCourseObjects.learnFileServersAndCDNs,
-  jsCourseObjects.learnDocker,
-  jsCourseObjects.learnPubSubArchitecture,
-  jsCourseObjects.capstoneProject,
-  jsCourseObjects.learnHowToFindAProgrammingJob,
-];
-
-export { courseArrayTs, jsCourseObjects };
+export { tsCourseObjects };

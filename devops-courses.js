@@ -108,25 +108,4 @@ const devOpsCurriculumCourses = {
   },
 };
 
-const courseArrayDevOps = [
-  devOpsCurriculumCourses.learnToCodeInPython,
-  devOpsCurriculumCourses.learnLinux,
-  devOpsCurriculumCourses.buildABookbot,
-  devOpsCurriculumCourses.learnGit,
-  devOpsCurriculumCourses.learnObjectOrientedProgramming,
-  devOpsCurriculumCourses.buildAsteroids,
-  devOpsCurriculumCourses.personalProject1,
-  devOpsCurriculumCourses.learnGo,
-  devOpsCurriculumCourses.learnHTTPClients,
-  devOpsCurriculumCourses.learnSQL,
-  devOpsCurriculumCourses.learnHTTPServers,
-  devOpsCurriculumCourses.learnDocker,
-  devOpsCurriculumCourses.learnLoggingAndObservability,
-  devOpsCurriculumCourses.learnAWS,
-  devOpsCurriculumCourses.learnCICD,
-  devOpsCurriculumCourses.learnKubernetes,
-  devOpsCurriculumCourses.capstoneProject,
-  devOpsCurriculumCourses.learnHowToFindAProgrammingJob,
-];
-
-export { courseArrayDevOps, devOpsCurriculumCourses };
+export { devOpsCurriculumCourses };
