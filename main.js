@@ -49,9 +49,13 @@ function main() {
   generateCourses(currentPath);
   remainingLessonsDom.value = currentPathLength;
   totalLessonsDom.textContent = currentPathLength;
+  let totalCompleted = 0;
+  let totalRemaining = currentPathLength;
+  let daysToFinish;
 
   const select = document.querySelector(".path-options");
   select.addEventListener("change", (e) => {
+    currentPath.forEach((course) => (course.checked = false));
     currentPath = pathMap[e.target.value];
     completedCoursesContainer.innerHTML = "";
     currentPathLength = calculator.getPathLength(currentPath);
@@ -70,10 +74,27 @@ function main() {
     if (!course) return;
 
     course.checked = e.target.checked;
-    let totalCompleted = calculator.getCompletedLength(currentPath);
-    let totalRemaining = currentPathLength - totalCompleted;
+    totalCompleted = calculator.getCompletedLength(currentPath);
+    totalRemaining = currentPathLength - totalCompleted;
     remainingLessonsDom.value = totalRemaining;
     totalLessonsDom.textContent = currentPathLength;
+  });
+
+  const dailyAverageField = document.querySelector(".daily-average");
+  const button = document.querySelector(".button");
+  const completionEle = document.querySelector(".completion-estimate");
+  button.addEventListener("click", (e) => {
+    if (
+      dailyAverageField.value === undefined ||
+      dailyAverageField.value === "" ||
+      dailyAverageField.value === null
+    ) {
+      alert("Enter the average number of lessons you complete a day.");
+    }
+    const dailyAvg = +dailyAverageField.value;
+    totalRemaining = remainingLessonsDom.value;
+    daysToFinish = +totalRemaining / dailyAvg;
+    completionEle.textContent = Math.ceil(daysToFinish);
   });
 }
 

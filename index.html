@@ -20,6 +20,7 @@
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
+    <div class="calc">
     <div class="title-sec gold-text">
       <h1>Boot.Dev Completion Calculator</h1>
       <p>Calculate your estimated time to finish!</p>
@@ -40,14 +41,20 @@
           <label for="courses">Select Completed Courses</label>
           <div class="courses"></div>
           <div class="lessons">
-            <div class="remaining-courses">Lessons</div>
-            <div class="values">
-              <div>Total: <span class="total-lessons">110</span></div>
-              <div>Remaining: <input type="text" inputmode="numeric" pattern="[0-9]*" class="remaining-lessons" maxlength="4"></input></div>
-            </div>
+          <div class="title">Lessons</div>            
+          <div class="values">
+            <div>Total: <span class="total-lessons">110</span></div>
+            <div>Remaining: <input type="text" inputmode="numeric" pattern="[0-9]*" class="remaining-lessons" maxlength="4"></input></div>
           </div>
+          </div>
+        <div>Enter your daily average: <input type="text" inputmode="numeric" pattern="[0-9]*" class="daily-average" maxlength="4"></div>
+        <div class="button silver-button">Get Idealistic Estimate</div>
+        <div class="estimate">
+          <div class="title">Estimate</div>
+          <div>Days to path completion: <span class="completion-estimate"></span></div>
         </div>
       </div>
     </section>
+    </div>
   </body>
 </html>
