@@ -249,3 +249,11 @@ section {
 .hidden {
   display: none;
 }
+
+.disclaimer {
+  font-size: 0.8rem;
+}
+
+.estimate-message {
+  margin-bottom: 5px;
+}
